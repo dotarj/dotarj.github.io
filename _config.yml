@@ -1,0 +1,10 @@
+author: Arjen Post
+
+url: "http://arjenpost.nl"
+
+name: Arjen Post
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
+pygments: true
+permalink: /blog/:title/
