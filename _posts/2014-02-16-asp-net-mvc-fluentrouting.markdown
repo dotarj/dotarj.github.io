@@ -14,6 +14,8 @@ routes.For<HomeController>()
         .WithConstraints().HttpMethod(HttpMethod.Get);
 ```
 
+Note: This is an open source project. The source code can be found on the [ASP.NET MVC Fluent Routing GitHub repository](https://github.com/dotarj/FluentRouting/), which also contains a demo project.
+
 ##Getting started
 
 Getting started with ASP.NET MVC Fluent Routing is easy! Just follow the steps below and soon you will fluently define your ASP.NET MVC routes.
