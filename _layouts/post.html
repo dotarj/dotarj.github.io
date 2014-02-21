@@ -3,11 +3,9 @@ layout: default
 ---
 <article>
     <header>
-        <div class="date line"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d %B %Y" }}</time><hr /></div>
-
         <h1 class="line">{{ page.title }}</h1>
 
-        <div class="author">by <a href="/about" rel="author">Arjen Post</a></div>
+        <div class="author"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d %B %Y" }}</time> by <a href="/about" rel="author">Arjen Post</a></div>
     </header>
 
 	{{ content }}
