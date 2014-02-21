@@ -346,6 +346,7 @@ body nav:first-of-type a {
 .content {
     margin: 0 auto;
     max-width: 760px;
+    padding:3%;
 }
 
 h1, h2, h3, h4, .author {
