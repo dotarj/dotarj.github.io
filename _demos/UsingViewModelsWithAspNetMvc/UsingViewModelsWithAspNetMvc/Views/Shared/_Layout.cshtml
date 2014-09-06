@@ -1,0 +1,16 @@
+﻿@model UsingViewModelsWithAspNetMvc.ViewModels.LayoutViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@Model.Title</title>
+    <meta name="description" content="@Model.MetaDescription"/>
+</head>
+<body>
+    <div>
+        <h1>@Model.Header1</h1>
+        @RenderBody()
+    </div>
+</body>
+</html>
