@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UsingViewModelsWithAspNetMvc.Models;
+using UsingViewModelsWithAspNetMvc.ViewModels.Shared;
 
-namespace UsingViewModelsWithAspNetMvc.ViewModels
+namespace UsingViewModelsWithAspNetMvc.ViewModels.Home
 {
-    public class CompanyViewModel : LayoutViewModel
+    public class IndexViewModel : LayoutViewModel
     {
         private readonly Company company;
         
-        public CompanyViewModel(Company company)
+        public IndexViewModel(Company company)
         {
             this.company = company;
 
@@ -17,15 +18,14 @@ namespace UsingViewModelsWithAspNetMvc.ViewModels
             base.MetaDescription = string.Format("A list of {0} employees with their respective salary.", company.Name);
         }
 
-        public string Name { get { return this.company.Name; } }
+        public string Name
+        {
+            get { return this.company.Name; }
+        }
 
         public IEnumerable<EmployeeViewModel> Employees
         {
-            get
-            {
-                return this.company.Employees == null ? 
-                    Enumerable.Empty<EmployeeViewModel>() : this.company.Employees.Select(EmployeeViewModel.Create);
-            }
+            get { return this.company.Employees == null ? Enumerable.Empty<EmployeeViewModel>() : this.company.Employees.Select(EmployeeViewModel.Create); }
         }
 
         public class EmployeeViewModel
@@ -39,28 +39,17 @@ namespace UsingViewModelsWithAspNetMvc.ViewModels
 
             public string Name
             {
-                get
-                {
-                    return string.Format("{0} {1}", this.employee.FirstName, this.employee.LastName);
-                } 
+                get { return string.Format("{0} {1}", this.employee.FirstName, this.employee.LastName); }
             }
 
             public string Salary
             {
-                get
-                {
-                    return this.employee.Salary.HasValue ? 
-                        this.employee.Salary.Value.ToString("C") : "Unknown";
-                }
+                get { return this.employee.Salary.HasValue ? this.employee.Salary.Value.ToString("C") : "Unknown"; }
             }
 
             public string BirthDate
             {
-                get
-                {
-                    return this.employee.BirthDate.HasValue ? 
-                        this.employee.BirthDate.Value.ToShortDateString() : "Unknown";
-                }
+                get { return this.employee.BirthDate.HasValue ? this.employee.BirthDate.Value.ToShortDateString() : "Unknown"; }
             }
 
             public static EmployeeViewModel Create(Employee employee)

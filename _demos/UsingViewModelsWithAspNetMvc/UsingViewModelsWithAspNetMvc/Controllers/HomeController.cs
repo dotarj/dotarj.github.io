@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 using UsingViewModelsWithAspNetMvc.Repositories;
-using UsingViewModelsWithAspNetMvc.ViewModels;
+using UsingViewModelsWithAspNetMvc.ViewModels.Home;
 
 namespace UsingViewModelsWithAspNetMvc.Controllers
 {
@@ -17,9 +17,7 @@ namespace UsingViewModelsWithAspNetMvc.Controllers
         {
             var company = companyRepository.Get();
 
-            var viewModel = new CompanyViewModel(company);
-
-            return View(viewModel);
+            return View(new IndexViewModel(company));
         }
     }
 }

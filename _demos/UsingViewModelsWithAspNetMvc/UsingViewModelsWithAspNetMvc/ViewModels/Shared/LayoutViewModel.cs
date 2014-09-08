@@ -1,4 +1,4 @@
-﻿namespace UsingViewModelsWithAspNetMvc.ViewModels
+﻿namespace UsingViewModelsWithAspNetMvc.ViewModels.Shared
 {
     public class LayoutViewModel
     {
