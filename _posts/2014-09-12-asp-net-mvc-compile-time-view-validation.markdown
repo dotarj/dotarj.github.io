@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ASP.NET MVC compile-time view validation"
-date:   2014-09-19
+date:   2014-09-12
 categories: asp net aspnet mvc view validation
 description: "When I started using ASP.NET MVC my biggest concern was the views; every syntax error in a view would result in a runtime exception. Fortunately, Microsoft has added support for compile-time view validation."
 ---
